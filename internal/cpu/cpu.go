@@ -30,7 +30,8 @@ func PrintCPUTemp() {
 
 	if err != nil {
 		fmt.Printf("Error: %v", err)
+		return
 	}
 
-	fmt.Printf("Current CPU temperature: %.2f°C\n", temp)
+	fmt.Printf("CPU temperature: %.2f°C\n", temp)
 }
