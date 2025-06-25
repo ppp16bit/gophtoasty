@@ -24,14 +24,3 @@ func GetCPUTemp() (float64, error) {
 
 	return 0, fmt.Errorf("Not found")
 }
-
-func PrintCPUTemp() {
-	temp, err := GetCPUTemp()
-
-	if err != nil {
-		fmt.Printf("Error: %v", err)
-		return
-	}
-
-	fmt.Printf("CPU temperature: %.2f°C\n", temp)
-}
