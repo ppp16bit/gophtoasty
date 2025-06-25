@@ -26,13 +26,6 @@ func NvidiaSmi() (float64, error) {
 	return temp, nil
 }
 
-func PrintGPUTemp() {
-	temp, err := NvidiaSmi()
-
-	if err != nil {
-		fmt.Printf("Error: %v", err)
-		return
-	}
-
-	fmt.Printf("GPU temperature: %.2f°C\n", temp)
+func GetGPUTemp() (float64, error) {
+	return NvidiaSmi()
 }
